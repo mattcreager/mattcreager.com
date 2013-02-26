@@ -1,0 +1,550 @@
+/*
+                   .<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>. 
+                .<@@@@@@   $$$$$$$$$$$$$$$$$$$$$\^^^^^^/$$$$@@@>. 
+             .<@@@@@<   .$$$$$'~       '~'$$$$$$$\  /$$$$$$>@@@@@>. 
+          .<@@@@@<'   o$$$$$$                `'$$$$$$$$$$$$  '>@@@@@>. 
+       .<@@@@@<'    o$$$$$$oo.                  )$$$$$$$$$$     '>@@@@@>. 
+       '<@@@@@<    o$$$$$$$$$$$.                                 >@@@@@>' 
+         '<@@@@<  o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$oooooo...    >@@@@>' 
+           '@@@@< $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)>@@@@>' 
+             '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+               '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+                 '<@@@@<    .oooo.                    .$$@@@@>' 
+                   '<@@@@oo$$$$$$$o..             ..o$$@@@@>' 
+                     '<@@@@$$$$$$$$$$$$$oooooooo$$$$$@@@@>' 
+                       '<@@@@'$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+                         '<@@@@<   ~"SSSSSS"~   >@@@@>' 
+                           '<@@@@<            >@@@@>' 
+                             '<@@@@<        >@@@@>' 
+                               '<@@@@<    >@@@@>' 
+                                 '<@@@@<>@@@@>' 
+                                   '<@@@@@@>' 
+                                     '<@@>' 
+                                       ^^    
+*/
+
+/* ==========================================================================
+   Web Fonts
+   ========================================================================== */
+
+@font-face { font-family: 'JustVector'; font-weight: normal; font-style: normal;
+    src: url('../fonts/justvector/justvector-webfont.eot');
+    src: url('../fonts/justvector/justvector-webfont.eot?#iefix') format('eot'),
+         url('../fonts/justvector/justvector-webfont.woff') format('woff'),
+         url('../fonts/justvector/justvector-webfont.ttf') format('truetype'),
+         url('../fonts/justvector/justvector-webfont.svg#webfontmuk63VQd') format('svg');
+}
+
+/* ==========================================================================
+   CSS Clear Fix
+   ========================================================================== */
+
+.clear:before,
+.clear:after,
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.clear:after,
+.container:after {
+    clear: both;
+}
+
+.clear,
+.container {
+    zoom: 1;
+}
+
+/* ==========================================================================
+   General Element Styles/Layout Styles
+   ========================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    color: #272822;
+    background: #fffbf4;
+    padding-top: 40px;
+    font: 20px/25px 'Vollkorn', Georgia, Times, serif;
+}
+
+a {
+    color: #f92672;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #f92672;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    padding-top: 26px;
+}
+
+h2 {
+    color: rgba(39, 40, 34, 0.35);
+    font-size: 22px;
+}
+
+h3 {
+    font: 20px/25px 'Vollkorn', Georgia, Times, serif;
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+h4 {
+    font: 20px/25px 'Vollkorn', Georgia, Times, serif;
+    font-weight: normal;
+    margin: 10px 0 15px;
+}
+
+/* Header/Logo/Tagline
+*************************************************/
+header {
+    background: url('../img/logo.png') no-repeat;
+    height: 120px;
+    padding-left: 140px;
+    position: relative;
+}
+
+header .var {
+    color: #66D9EF;
+}
+
+header .operator {
+    color: #F92672;
+}
+
+header .string {
+    color: #FD971F;
+}
+
+/* Navigation
+*************************************************/
+header nav {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 100%;
+}
+
+header nav li {
+    float: right;
+}
+
+header nav li a {
+    display: block;
+    padding: 8px 15px 6px;
+    margin: 0 0 0 10px;
+    text-decoration: none;
+    line-height: 28px;
+    font-size: 20px;
+    color: #000;
+}
+
+header nav .active a, 
+header nav li a:hover {
+    background: #A6E22E;
+    color: #000;
+}
+
+/* Main Layout
+*************************************************/
+.title {
+    margin-top: 40px;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+.main > section {
+    float: left;
+    width: 25%;
+}
+
+.main > section > .inner {
+    padding: 0 30px;
+}
+
+.main section:first-child > .inner {
+    padding-left: 0;
+}
+
+.main section:last-child > .inner {
+    padding-right: 0;
+}
+
+.main h3,
+.title h3 {
+    line-height: 30px;
+    font-size: 24px;
+    background: #66D9EF;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(0,0,0,.1);
+    position: relative;
+}
+
+.main h3:after, 
+.title h3:after {
+    border-left-color: #66D9EF;
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    border-left-width: 0.5em;
+    border-left-style: solid;
+    border-bottom: 0.5em solid transparent;
+}
+
+.main h4 {
+    color: #fff;
+    background: #000;
+    line-height: 24px;
+    padding: 5px 6px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   Page: Home
+   ========================================================================== */
+
+/* Short Bio
+*************************************************/
+section.bio {
+    width: 340px;
+} 
+
+.bio img {
+    width: 85%;
+    display: block;
+    margin: auto;
+}
+
+.bio .label {
+    line-height: 24px;
+    background: #66D9EF;
+    padding: 2px 6px 0;
+    margin-left: 10px;
+}
+
+.bio .text {
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.bio .inner > div {
+    padding-bottom: 10px;
+    clear: both;
+}
+
+/* About Me Section
+*************************************************/
+section.about-me {
+    width: 613px;
+}
+
+/* Social Media Links
+*************************************************/
+.social-links {
+    padding: 0;
+    margin: 25px 0 0;
+}
+
+.social-links li {
+    float: left;
+    display: block;
+    list-style: none;
+}
+
+.social-links a {
+    width: 52px;
+    height: 52px;
+    background: #eee;
+    background-color: rgba(0,0,0,.1);
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin: 0 6px 6px 0;
+    line-height: 55px;
+    font-family: "JustVector";
+    font-size: 42px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.social-links .facebook a:hover {
+    background-color: #3c5fac;
+}
+
+.social-links .linkedin a:hover {
+    background-color: #2089b5;
+}
+
+.social-links .twitter a:hover {
+    background-color: #5ec3df;
+}
+
+.social-links .pinterest a:hover {
+    background-color: #cb2027;
+}
+
+.social-links .github a:hover {
+    background-color: #2D2D2D;
+}
+
+/* Twitter Feed
+*************************************************/
+section.my-tweets {
+    width: 245px;
+}
+
+section.my-tweets h3 {
+    margin-bottom: 30px;
+}
+
+.tweets {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.tweets dt {
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.tweets dd {
+    background: #ccc;
+    line-height: 24px;
+    padding: 0 15px;
+    margin: 0 0 20px;
+}
+
+/* ==========================================================================
+   Page: Resume
+   ========================================================================== */
+
+
+/* Resume: Employment History/Education Section
+*************************************************/
+section.resume-body {
+    width: 712px;
+}
+
+.resume-body .job {
+    font-size: 18px;
+    border-left: 1px solid #FD971F;
+    padding: 10px 0 1px 20px;
+    margin-bottom: 35px;
+}
+
+.resume-body .job h4 {
+    font-size: 20px;
+    background: none;
+    color: #000;
+    padding: 0;
+    margin: 0 0 0;
+}
+
+.resume-body .job h5 {
+    padding-top: 3px;
+    font-size: 18px;
+    border-left: 40px solid #CFCFCF;
+    line-height: 17px;
+    color: #ACACAC;
+    font-weight: normal;
+    margin: 0 0 0;
+    padding: 0 0 0 5px;
+}
+
+.resume-body .job .when {
+    color: #ccc;
+    float: right;
+    margin-top: 0px;
+}
+
+/* Resume: Skills Section
+*************************************************/
+section.resume-skills {
+    width: 488px;
+}
+
+.resume-skills .skill {
+    border-left: 1px solid #FD971F;
+    padding: 1px 0 1px 20px;
+    margin-bottom: 25px;
+}
+
+.resume-skills .skill h4 {
+    font-size: 20px;
+    background: none;
+    color: #000;
+    padding: 0;
+    margin: 0 0 0;
+}
+
+.resume-skills .skill .bar {
+    background: #EBEBEB;
+    position: relative;
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.resume-skills .skill .progress {
+    background: #FD971F;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Page: Contact
+   ========================================================================== */
+
+/* Google Map
+*************************************************/
+section.contact-map {
+    width: 815px;
+}
+
+#gmap {
+    width: 100%;
+    outline: none;
+    height: 460px;
+    border: none;
+}
+
+/* Contact Form
+*************************************************/
+section.contact-form {
+    width: 385px;
+}
+
+.contact-form label {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background: #66D9EF;
+    color: #222;
+    display: inline-block;
+    padding: 2px 8px;
+    position: relative;
+    font-size: 90%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form label:after {
+    border-left-color: #66D9EF;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    bottom: -0.5em;
+    left: 0;
+    border-left-width: 0.5em;
+    border-left-style: solid;
+    border-bottom: 0.5em solid transparent;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    background: #66D9EF;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    border-width: 0 0 0 4px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 10px 40px;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.contact-form button:hover {
+    border-color: #000;
+}
+
+.contact-form input {
+    margin-bottom: 14px;
+}
+
+.contact-form textarea {
+    font-size: 16px;
+    height: 200px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    display: block;
+    width: 327px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    background: #EAEAEA;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: transparent;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    background: none;
+    border-bottom: 2px solid #66D9EF;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 760px) {
+    .main section {
+        float: none;
+        width: 100%;
+    }
+
+    .bio-pic {
+        text-align: center;
+    }
+
+    .bio-pic img {
+        max-width: 200px;
+    }
+}   
