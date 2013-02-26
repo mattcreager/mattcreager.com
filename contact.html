@@ -97,7 +97,13 @@
         </section>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <footer class="container">
+        &copy;2013 <a href="mailto:matt@symptom6.com">Matthew Creager</a>
+        <aside>
+            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fsymptom6.com%2F">This document is valid HTML5</a>
+        </aside>
+    </footer>
+
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
         var coords = new google.maps.LatLng(44.63236390, -63.68475460000001);
@@ -115,6 +121,7 @@
             map: map,
             title: "Hello World!"
         });
+
         var pinIcon = new google.maps.MarkerImage(
             "img/me-head.png",
             null, /* size is determined at runtime */
@@ -122,6 +129,7 @@
             null, /* anchor is bottom center of the scaled image */
             new google.maps.Size(64, 64)
         );  
+        
         marker.setIcon(pinIcon);
 
         // Google Analytics
