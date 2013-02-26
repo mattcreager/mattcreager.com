@@ -89,9 +89,15 @@ h1, h2, h3 {
     margin: 0;
 }
 
-h1 {
+h1, h1 a {
+    color: #272822;
     font-size: 36px;
     padding-top: 26px;
+}
+
+h1 a:hover {
+    background: none;
+    color: #F92672;
 }
 
 h2 {
@@ -138,7 +144,7 @@ header nav {
     position: absolute;
     right: 0;
     top: 20px;
-    width: 100%;
+    width: 400px;
 }
 
 header nav li {
@@ -152,13 +158,13 @@ header nav li a {
     text-decoration: none;
     line-height: 28px;
     font-size: 20px;
-    color: #000;
+    color: #272822;
 }
 
 header nav .active a, 
 header nav li a:hover {
     background: #A6E22E;
-    color: #000;
+    color: #272822;
 }
 
 /* Main Layout
@@ -214,7 +220,7 @@ header nav li a:hover {
 
 .main h4 {
     color: #fff;
-    background: #000;
+    background: #272822;
     line-height: 24px;
     padding: 5px 6px;
     display: inline-block;
@@ -382,7 +388,7 @@ section.resume-body {
 .resume-body .job h4 {
     font-size: 20px;
     background: none;
-    color: #000;
+    color: #272822;
     padding: 0;
     margin: 0 0 0;
 }
@@ -419,7 +425,7 @@ section.resume-skills {
 .resume-skills .skill h4 {
     font-size: 20px;
     background: none;
-    color: #000;
+    color: #272822;
     padding: 0;
     margin: 0 0 0;
 }
@@ -505,7 +511,7 @@ section.contact-form {
 }
 
 .contact-form button:hover {
-    border-color: #000;
+    border-color: #272822;
 }
 
 .contact-form input {
