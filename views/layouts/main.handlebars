@@ -51,13 +51,19 @@
     <div class="header container">
         <header class="wrapper clearfix">
             <h1><a href="http://www.symptom6.com">Symptom Six</a></h1>
-            <h2><span class="var">var</span> person <span class="operator">= new</span> Person(<span class="string">"Matthew Creager"</span>);</h2>
+            <h2>
+                <span class="unneeded">
+                    <span class="var">var</span> person
+                    <span class="operator">=</span>
+                </span>
+                <span class="operator">new</span> Person(<span class="string">"Matthew Creager"</span>);
+            </h2>
 
             <nav>
                 <ul>
-                    <li {{#if page.contact}} class="active" {{/if}}><a href="contact">Contact</a></li>
-                    <li {{#if page.resume}} class="active" {{/if}}><a href="resume">Resume</a></li>
                     <li {{#if page.home}} class="active" {{/if}}><a href="/">Home</a></li>
+                    <li {{#if page.resume}} class="active" {{/if}}><a href="resume">Resume</a></li>
+                    <li {{#if page.contact}} class="active" {{/if}}><a href="contact">Contact</a></li>
                 </ul>
             </nav>
         </header>

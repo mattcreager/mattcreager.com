@@ -1,26 +1,26 @@
 /*
-                   .<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>. 
-                .<@@@@@@   $$$$$$$$$$$$$$$$$$$$$\^^^^^^/$$$$@@@>. 
-             .<@@@@@<   .$$$$$'~       '~'$$$$$$$\  /$$$$$$>@@@@@>. 
-          .<@@@@@<'   o$$$$$$                `'$$$$$$$$$$$$  '>@@@@@>. 
-       .<@@@@@<'    o$$$$$$oo.                  )$$$$$$$$$$     '>@@@@@>. 
-       '<@@@@@<    o$$$$$$$$$$$.                                 >@@@@@>' 
-         '<@@@@<  o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$oooooo...    >@@@@>' 
-           '@@@@< $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)>@@@@>' 
-             '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
-               '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
-                 '<@@@@<    .oooo.                    .$$@@@@>' 
-                   '<@@@@oo$$$$$$$o..             ..o$$@@@@>' 
-                     '<@@@@$$$$$$$$$$$$$oooooooo$$$$$@@@@>' 
-                       '<@@@@'$$$$$$$$$$$$$$$$$$$$$@@@@>' 
-                         '<@@@@<   ~"SSSSSS"~   >@@@@>' 
-                           '<@@@@<            >@@@@>' 
-                             '<@@@@<        >@@@@>' 
-                               '<@@@@<    >@@@@>' 
-                                 '<@@@@<>@@@@>' 
-                                   '<@@@@@@>' 
-                                     '<@@>' 
-                                       ^^    
+                   .<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>.
+                .<@@@@@@   $$$$$$$$$$$$$$$$$$$$$\^^^^^^/$$$$@@@>.
+             .<@@@@@<   .$$$$$'~       '~'$$$$$$$\  /$$$$$$>@@@@@>.
+          .<@@@@@<'   o$$$$$$                `'$$$$$$$$$$$$  '>@@@@@>.
+       .<@@@@@<'    o$$$$$$oo.                  )$$$$$$$$$$     '>@@@@@>.
+       '<@@@@@<    o$$$$$$$$$$$.                                 >@@@@@>'
+         '<@@@@<  o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$oooooo...    >@@@@>'
+           '@@@@< $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)>@@@@>'
+             '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>'
+               '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>'
+                 '<@@@@<    .oooo.                    .$$@@@@>'
+                   '<@@@@oo$$$$$$$o..             ..o$$@@@@>'
+                     '<@@@@$$$$$$$$$$$$$oooooooo$$$$$@@@@>'
+                       '<@@@@'$$$$$$$$$$$$$$$$$$$$$@@@@>'
+                         '<@@@@<   ~"SSSSSS"~   >@@@@>'
+                           '<@@@@<            >@@@@>'
+                             '<@@@@<        >@@@@>'
+                               '<@@@@<    >@@@@>'
+                                 '<@@@@<>@@@@>'
+                                   '<@@@@@@>'
+                                     '<@@>'
+                                       ^^
 */
 
 /* ==========================================================================
@@ -121,8 +121,8 @@ h4 {
 *************************************************/
 header {
     background: url('../img/logo.png') no-repeat;
-    height: 120px;
     padding-left: 140px;
+    min-height: 120px;
     position: relative;
 }
 
@@ -143,16 +143,22 @@ header .string {
 header nav {
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 50px;
     width: 400px;
 }
 
+header nav ul {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
 header nav li {
-    float: right;
+    display: inline-block;
 }
 
 header nav li a {
-    display: block;
+    display: inline-block;
     padding: 8px 15px 6px;
     margin: 0 0 0 10px;
     text-decoration: none;
@@ -161,7 +167,7 @@ header nav li a {
     color: #272822;
 }
 
-header nav .active a, 
+header nav .active a,
 header nav li a:hover {
     background: #A6E22E;
     color: #272822;
@@ -206,7 +212,7 @@ header nav li a:hover {
     position: relative;
 }
 
-.main h3:after, 
+.main h3:after,
 .title h3:after {
     border-left-color: #66D9EF;
     content: "";
@@ -248,7 +254,7 @@ footer aside {
 *************************************************/
 section.bio {
     width: 340px;
-} 
+}
 
 .bio img {
     width: 85%;
@@ -342,10 +348,16 @@ section.about-me {
 *************************************************/
 section.my-tweets {
     width: 245px;
+    overflow: hidden;
 }
 
 section.my-tweets h3 {
     margin-bottom: 30px;
+}
+
+section.my-tweets iframe {
+    width: 99%!important;
+    min-width: 100px!important;
 }
 
 .tweets {
@@ -523,7 +535,7 @@ section.contact-form {
     height: 200px;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     display: block;
     width: 327px;
@@ -543,7 +555,7 @@ section.contact-form {
     transition: all 0.3s ease-out;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
     background: none;
     border-bottom: 2px solid #66D9EF;
@@ -553,17 +565,177 @@ section.contact-form {
    Responsive Styles
    ========================================================================== */
 
-@media (max-width: 760px) {
-    .main section {
-        float: none;
-        width: 100%;
+/* CSS3 Responsive Media Queries for < 1200px
+*************************************************/
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
     }
 
-    .bio-pic {
+    section.bio {
+        width: 240px;
+    }
+
+    section.bio .text {
+        display: block;
+        padding: 5px 0 5px 10px;
+    }
+
+    section.about-me {
+        width: 510px;
+    }
+
+    section.my-tweets {
+        width: 210px;
+    }
+
+    section.resume-body {
+        width: 560px;
+    }
+
+    section.resume-skills {
+        width: 400px;
+    }
+
+    section.contact-map {
+        width: 560px;
+    }
+
+    section.contact-form {
+        width: 400px;
+    }
+}
+
+/* CSS3 Responsive Media Queries for < 960px
+*************************************************/
+@media (max-width: 960px) {
+    .container {
+        max-width: 720px;
+    }
+
+    section.bio {
+        width: 240px;
+    }
+
+    section.bio .text {
+        display: block;
+        padding: 5px 0 5px 10px;
+    }
+
+    section.about-me {
+        width: 480px;
+    }
+
+    section.about-me > .inner {
+        padding-right: 0;
+    }
+
+    section.my-tweets {
+        display: none;
+    }
+
+    header nav {
+        position: static;
+        top: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 30px -140px 0 0;
+    }
+
+    header nav ul {
         text-align: center;
     }
 
-    .bio-pic img {
-        max-width: 200px;
+    header nav li, header nav li a {
+        display: inline-block;
+        float: none;
+        margin: 0;
     }
-}   
+
+    section.resume-body,
+    section.resume-skills,
+    section.contact-map,
+    section.contact-form {
+        width: auto;
+        padding: 0;
+        float: none;
+    }
+
+    section.resume-body > .inner,
+    section.resume-skills > .inner,
+    section.contact-map > .inner,
+    section.contact-form > .inner  {
+        padding: 0;
+    }
+}
+
+/* CSS3 Responsive Media Queries for < 720px
+*************************************************/
+@media (max-width: 720px) {
+    body {
+        padding-top: 10px;
+    }
+
+    header {
+        background-position: top center;
+        padding: 100px 0 0 0;
+        text-align: center;
+    }
+
+    header h1 {
+        padding-bottom: 10px;
+    }
+
+    header h2 .unneeded {
+        display: none;
+    }
+
+    header nav {
+        margin-left: 0;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .container section {
+        width: auto;
+        float: none;
+        border-bottom: 1px solid #f92672;
+        padding: 20px 20px;
+    }
+
+    .container section > .inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section.bio {
+        margin-top: -60px;
+    }
+
+    section.bio .label {
+        margin-left: 0;
+    }
+
+    section.bio .text {
+        display: inline;
+        padding: 5px 0 5px 10px;
+    }
+
+    .bio img {
+        max-width: 280px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer aside {
+        padding-top: 10px;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
