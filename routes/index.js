@@ -2,8 +2,9 @@
 module.exports = function (app) {
 
 	app.get('*', function (req, res, next) {
-		var route 	     = req.url.match(/^\/([^\?]*)/)[1] || 'home';
-		app.locals.page  = { route: true };
+		var route 	     	   = req.url.match(/^\/([^\?]*)/)[1] || 'home';
+		app.locals.page 	   = {}
+		app.locals.page[route] = true;
 		next();
 	});
 
