@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Website by Matthew Creager 
+                   .<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>. 
+                .<@@@@@@   $$$$$$$$$$$$$$$$$$$$$\^^^^^^/$$$$@@@>. 
+             .<@@@@@<   .$$$$$'~       '~'$$$$$$$\  /$$$$$$>@@@@@>. 
+          .<@@@@@<'   o$$$$$$                `'$$$$$$$$$$$$  '>@@@@@>. 
+       .<@@@@@<'    o$$$$$$oo.                  )$$$$$$$$$$     '>@@@@@>. 
+       '<@@@@@<    o$$$$$$$$$$$.                                 >@@@@@>' 
+         '<@@@@<  o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$oooooo...    >@@@@>' 
+           '@@@@< $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)>@@@@>' 
+             '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+               '<@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+                 '<@@@@<    .oooo.                    .$$@@@@>' 
+                   '<@@@@oo$$$$$$$o..             ..o$$@@@@>' 
+                     '<@@@@$$$$$$$$$$$$$oooooooo$$$$$@@@@>' 
+                       '<@@@@'$$$$$$$$$$$$$$$$$$$$$@@@@>' 
+                         '<@@@@<   ~"SSSSSS"~   >@@@@>' 
+                           '<@@@@<            >@@@@>' 
+                             '<@@@@<        >@@@@>' 
+                               '<@@@@<    >@@@@>' 
+                                 '<@@@@<>@@@@>' 
+                                   '<@@@@@@>' 
+                                     '<@@>' 
+                                       ^^    
+    -->
+    <meta name="viewport" content="width=device-width">
+
+    <title>Symptom Six - The Webspace of Matthew Creager</title>
+    
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:bold">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Vollkorn">
+
+    <script src="js/vendor/modernizr.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="header container">
+        <header class="wrapper clearfix">
+            <h1><a href="http://www.symptom6.com">Symptom Six</a></h1>
+            <h2><span class="var">var</span> person <span class="operator">= new</span> Person(<span class="string">"Matthew Creager"</span>);</h2>
+
+            <nav>
+                <ul>
+                    <li {{#if page.contact}} class="active" {{/if}}><a href="contact">Contact</a></li>
+                    <li {{#if page.resume}} class="active" {{/if}}><a href="resume">Resume</a></li>
+                    <li {{#if page.home}} class="active" {{/if}}><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    {{{ body }}
+
+    <footer class="container">
+        &copy;2013 <a href="mailto:matt@symptom6.com">Matthew Creager</a>
+        <aside>
+            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fsymptom6.com%2F">This document is valid HTML5</a>
+        </aside>
+    </footer>
+
+    <script>
+        // Twitter Widget
+        !function(d,s,id) {
+            var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+        // Google Analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38820147-1']);
+        _gaq.push(['_setDomainName', 'symptom6.com']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+
+</html>
