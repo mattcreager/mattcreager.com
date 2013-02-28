@@ -37,7 +37,9 @@ module.exports = function (app) {
             var transport = nodemailer.createTransport("sendmail");
 
             // send mail with defined transport object
-            transport.sendMail(mailOptions, transport.close);
+            transport.sendMail(mailOptions, function (error, response) {
+                transport.close();
+            });
         }
 
     });
