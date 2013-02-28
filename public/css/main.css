@@ -555,10 +555,33 @@ section.contact-form {
     transition: all 0.3s ease-out;
 }
 
+.contact-form #thank-you h4 {
+    margin-bottom: 0;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
     background: none;
     border-bottom: 2px solid #66D9EF;
+}
+
+.contact-form div.control-group {
+    position: relative;
+    width: 356px;
+}
+
+.contact-form span.error-message {
+    color: rgb(255, 107, 107);
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.contact-form input.error {
+    border-bottom: 1px solid rgb(255, 0, 8);
+    border-right: 1px solid #EACBCC;
+    background-color: #FFDFDF;
 }
 
 /* ==========================================================================
