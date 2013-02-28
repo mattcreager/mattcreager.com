@@ -26,6 +26,7 @@ module.exports = function (app) {
         if ( req.body.email === '' ) {
             return res.json(400, { error: 'email address please!' });
         } else {
+            res.json(200);
             // setup e-mail data with unicode symbols
             var mailOptions = {
                 from: req.body.email, // sender address
