@@ -3,10 +3,10 @@
  * Dependencies: Lodash & jQuery
  */
 
-"use strict";
-
 // Create our contact pseudo-model
 function Contact(attributes) {
+    "use strict";
+
     var props, defaults, save;
 
     defaults = {
@@ -20,16 +20,17 @@ function Contact(attributes) {
 
 // Attach a save method to the our contact model
 _.assign(Contact.prototype, {
-    save: function(success, err){
+    save: function (success, err) {
 
         var request = $.post('contact/submit', this.props);
-            request.fail(function (data) { err($.parseJSON(data.responseText).error) });
+            request.fail(function (data) { err($.parseJSON(data.responseText).error); });
             request.done(success);
     }
 });
 
 //  
 var contactForm = (function ($) {
+    "use strict";
     
     // Element container object
     var el = {};
