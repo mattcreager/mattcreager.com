@@ -1,4 +1,5 @@
-// Comments Please
+var nodemailer = require('nodemailer');
+
 module.exports = function (app) {
 
     app.get('*', function (req, res, next) {
@@ -25,7 +26,27 @@ module.exports = function (app) {
         if ( req.body.email === '' ) {
             return res.json(400, { error: 'email address please!' });
         } else {
-            res.send('blah');
+            // setup e-mail data with unicode symbols
+            var mailOptions = {
+                from: req.body.email, // sender address
+                to: "matt@symptom6.com", // list of receivers
+                subject: "Contact Form Submission: mattcreager.com", // Subject line
+                text: req.body.message
+            }
+
+            var transport = nodemailer.createTransport("sendmail");
+
+            // send mail with defined transport object
+            transport.sendMail(mailOptions, function (error, response) {
+
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log("Message sent: " + response.message);
+                }
+
+                transport.close(); // shut down the connection pool, no more messages
+            });
         }
 
     });
