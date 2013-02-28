@@ -557,6 +557,7 @@ section.contact-form {
 
 .contact-form #thank-you h4 {
     margin-bottom: 0;
+    margin-top: 50px;
 }
 
 .contact-form input:focus,
