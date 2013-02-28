@@ -37,16 +37,7 @@ module.exports = function (app) {
             var transport = nodemailer.createTransport("sendmail");
 
             // send mail with defined transport object
-            transport.sendMail(mailOptions, function (error, response) {
-
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log("Message sent: " + response.message);
-                }
-
-                transport.close(); // shut down the connection pool, no more messages
-            });
+            transport.sendMail(mailOptions, transport.close);
         }
 
     });
